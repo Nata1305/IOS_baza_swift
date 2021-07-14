@@ -1,0 +1,49 @@
+import Foundation
+/* ЗАДАНИЕ 1. Решить квадратное уравнение
+ax2 + bx + c = 0-формула квадратного уравнения
+дискриминант —  D = b2 − 4ac*,
+x2 +12x + 36 = 0*/
+
+var a: Double = 1
+var b: Double = 12
+var c: Double = 36
+let discriminant: Double = b*b-4*a*c
+print("Дискриминант D = \(Int(discriminant))")
+
+var x1: Double = (-1)*b+sqrt(discriminant)/2*a
+
+var x2: Double = (-1)*b-sqrt(discriminant)/2*a
+
+var x3: Double = (-1)*b/2*a
+
+if (discriminant>0) {
+   print ("корни уравнения x1=\(x1), x2=\(x2) ")
+} else if (discriminant==0) {
+ print ("корень уравнения x=\(x3) ")
+} else {
+    print ("корней нет")
+}
+
+//Задание 2. Даны катеты прямоугольного треугольника. Найти, площадь, периметр, гипотенузу треугольника. 
+let katet1: Double = 6// катет 1
+let katet2: Double = 8// катет 2
+
+let s: Double = katet1*katet2/2// площадь треугольника
+
+let hypotene: Double = sqrt (katet1*katet1+katet2*katet2) //находим гипотенузу
+
+let p: Double = hypotene+katet1+katet2 //периметр треугольника
+print ("Площадь треугольника \(s), периметр \(p), гипотенуза \(hypotene) ")
+
+//Задание 3. Пользователь вводит ссуму вклада и годовой %. Найти сумму вклада через 5 лет.
+
+var deposit: Double = 8000// сумма вклада
+var  rate: Double = 6//процентная ставка
+var termDeposit: Double = 5// срок вклада в годах
+ 
+let finalDeposit: Double = deposit*(pow(Double(1+rate/100),termDeposit))//формула расчета 
+print ("Сумма вклада составит: \(round(finalDeposit*100/100.0))")
+
+
+
+
